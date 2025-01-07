@@ -11,9 +11,13 @@ class Lodash {
     for (let item of array) {
       result.unshift(Math.floor(item));
     }
+
     return result;
   }
-}
 
+  sumOfValues(array) {
+    return array.reduce((acc, item) => acc + item, 0);
+  }
+}
 
 module.exports = Lodash;

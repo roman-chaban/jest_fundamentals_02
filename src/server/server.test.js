@@ -1,0 +1,2 @@
+const Ajax = require('./server');
+

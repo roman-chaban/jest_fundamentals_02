@@ -48,5 +48,15 @@ describe("Lodash groupBy test", () => {
 
   test("should group array items by smallest values", () => {
     expect(_.groupBy(smallestValues)).toEqual([1, 2, 3, 4, 5]);
+    expect(_.groupBy(smallestValues)).toHaveLength(5);
+  });
+
+  test("should return type array", () => {
+    expect(Array.isArray(smallestValues)).toBeTruthy();
+  });
+
+  test("should return sum of array", () => {
+    expect(_.sumOfValues(_.groupBy(smallestValues))).toBe(15);
   });
 });
+
