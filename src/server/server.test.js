@@ -64,5 +64,7 @@ describe("Ajax: get", () => {
 
   test("should return users", () => {
     axios.get.mockReturnValue(usersData);
+
+    expect(axios.get.mockReturnValue(usersData)).toMatchSnapshot();
   });
 });

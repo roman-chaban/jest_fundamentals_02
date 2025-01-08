@@ -23,6 +23,8 @@ describe("Map functions testing suite", () => {
 
     expect(fn()).toBe(100);
   });
+
+  afterAll(() => {
+    jest.clearAllMocks();
+  });
 });
-
-
